@@ -1,3 +1,4 @@
-import useContainer from "./useContainer";
+import useResolve from "./useResolve";
+import useResolveAll from "./useResolveAll";
 
-export { useContainer };
+export { useResolve, useResolveAll };

@@ -1,7 +1,7 @@
 {
   "name": "reactject",
   "description": "React adapter of the TSyringe dependency injection container 💉",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
     "name": "Carlos Sala Samper",
