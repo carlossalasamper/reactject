@@ -1,5 +1,6 @@
 {
   "name": "reactject",
+  "description": "React adapter of the TSyringe dependency injection container 💉",
   "version": "0.0.1",
   "license": "MIT",
   "author": {
@@ -7,7 +8,7 @@
     "url": "https://godofprogramming.com"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@carlossalasamper"
+    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist",
