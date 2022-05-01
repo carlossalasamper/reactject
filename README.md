@@ -1,3 +1,6 @@
+[![npm](https://img.shields.io/npm/v/reactject.svg)](https://www.npmjs.com/package/reactject)
+[![npm](https://img.shields.io/npm/dt/reactject.svg)](https://www.npmjs.com/package/reactject)
+
 # Reactject
 
 <img src="./assets/images/logo.png?raw=true" style="max-width: 100%" />
