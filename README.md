@@ -3,7 +3,14 @@
 <img src="./assets/images/logo.png?raw=true" style="max-width: 100%" />
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
-</br>
+- [Compatibility](#compatibility)
+- [Features](#features)
+- [Usage](#features)
+  - [Installation](#installation)
+  - [Classes](#classes)
+  - [Functional components](#functional-components)
+  - [Third parties](#third-parties)
+    - [Redux Toolkit](#redux-toolkit)
 
 ## Compatibility
 
