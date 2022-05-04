@@ -3,7 +3,7 @@
 
 # Reactject
 
-<img src="./assets/images/logo.png?raw=true" style="max-width: 100%" />
+<img src="./assets/images/logo.png?raw=true" style="width: 100%; max-width: 100%" />
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Compatibility](#compatibility)
