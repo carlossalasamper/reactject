@@ -15,6 +15,7 @@
     - [Hooks](#hooks)
     - [Third parties](#third-parties)
       - [Redux Toolkit](#redux-toolkit)
+- [Support us](#support-us)
 
 ## Compatibility
 
@@ -70,3 +71,9 @@ To use the dependencies that we have registered in third-party library snippets,
 ```typescript
 // TODO
 ```
+
+## Support us
+
+☕️ Buy me a coffee so the open source party never ends.
+
+<a href="https://www.buymeacoffee.com/carlossala95" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
