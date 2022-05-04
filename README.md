@@ -74,6 +74,8 @@ To use the dependencies that we have registered in third-party library snippets,
 // TODO
 ```
 
+<hr>
+
 ## Support the project
 
 ☕️ Buy me a coffee so the open source party never ends.
