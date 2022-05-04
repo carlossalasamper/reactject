@@ -15,7 +15,7 @@
     - [Hooks](#hooks)
     - [Third parties](#third-parties)
       - [Redux Toolkit](#redux-toolkit)
-- [Support us](#support-us)
+- [Support the project](#support-the-project)
 
 ## Compatibility
 
@@ -72,7 +72,7 @@ To use the dependencies that we have registered in third-party library snippets,
 // TODO
 ```
 
-## Support us
+## Support the project
 
 ☕️ Buy me a coffee so the open source party never ends.
 
