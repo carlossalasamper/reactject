@@ -58,6 +58,8 @@ To resolve dependencies within javascript classes we will not have to do anythin
 
 #### Hooks
 
+We access the container dependencies transparently using the hooks we have prepared.
+
 ```typescript
 // TODO
 ```
