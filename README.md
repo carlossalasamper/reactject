@@ -15,6 +15,7 @@
     - [Hooks](#hooks)
     - [Third parties](#third-parties)
       - [Redux Toolkit](#redux-toolkit)
+      - [More integrations](#more-integrations)
 - [Support the project](#support-the-project)
 
 ## Compatibility
@@ -58,7 +59,7 @@ To resolve dependencies within javascript classes we will not have to do anythin
 
 #### Hooks
 
-We access the container dependencies transparently using the hooks we have prepared.
+Access the container dependencies transparently using the hooks we have prepared.
 
 ```typescript
 // TODO
@@ -73,6 +74,12 @@ To use the dependencies that we have registered in third-party library snippets,
 ```typescript
 // TODO
 ```
+
+##### More integrations
+
+Are you missing the integration of the dependency container with any library that you are using in your React projects?
+
+**Write an issue in our repository and support us so that we can get to work ✌️**
 
 <hr>
 

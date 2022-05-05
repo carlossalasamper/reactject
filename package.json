@@ -1,6 +1,18 @@
 {
   "name": "reactject",
   "description": "React adapter of the TSyringe dependency injection container 💉",
+  "keywords": [
+    "dependency injection",
+    "react",
+    "react native",
+    "dependency",
+    "injection",
+    "ioc",
+    "container",
+    "javascript",
+    "typescript",
+    "redux toolkit"
+  ],
   "version": "0.0.2",
   "license": "MIT",
   "author": {
