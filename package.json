@@ -13,7 +13,7 @@
     "typescript",
     "redux toolkit"
   ],
-  "version": "0.0.2",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Carlos Sala Samper",
@@ -24,8 +24,7 @@
     "url": "https://github.com/carlossalasamper/reactject.git"
   },
   "files": [
-    "dist",
-    "assets"
+    "dist"
   ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
