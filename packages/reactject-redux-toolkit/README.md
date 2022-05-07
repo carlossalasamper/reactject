@@ -46,6 +46,6 @@ yarn add reactject
   <a href="https://facebook.com/carlossala95" target="_blank">Facebook 👍</a>
 </nav>
 <hr>
-<p>
+<p align="center">
   <a href="https://godofprogramming.com" target="_blank">gofofprogramming.com</a>
 </p>
