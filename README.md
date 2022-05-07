@@ -31,6 +31,6 @@ Visit the [reactject package documentation](/packages/reactject/README.md) and s
   <a href="https://twitter.com/carlossala95" target="_blank">Twitter 🐦</a>
   <a href="https://facebook.com/carlossala95" target="_blank">Facebook 👍</a>
 </nav>
-<p>
+<p style="margin-top: 25;">
   <a href="https://godofprogramming.com" target="_blank">gofofprogramming.com</a>
 </p>
