@@ -138,6 +138,6 @@ In the [/examples](/examples) folder you will find demo React applications that 
   <a href="https://twitter.com/carlossala95" target="_blank">Twitter 🐦</a>
   <a href="https://facebook.com/carlossala95" target="_blank">Facebook 👍</a>
 </nav>
-<nav align="center">
-<a href="https://godofprogramming.com" target="_blank">gofofprogramming.com</a>
-</nav>
+<p>
+  <a href="https://godofprogramming.com" target="_blank">gofofprogramming.com</a>
+</p>
