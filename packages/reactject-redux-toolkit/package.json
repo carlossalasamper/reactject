@@ -1,0 +1,45 @@
+{
+  "name": "reactject-redux-toolkit",
+  "description": "Reactject TSyringe adapter for Redux Toolkit 💉",
+  "keywords": [
+    "dependency injection",
+    "react",
+    "react native",
+    "dependency",
+    "injection",
+    "ioc",
+    "container",
+    "javascript",
+    "typescript",
+    "redux toolkit",
+    "redux"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Carlos Sala Samper",
+    "url": "https://godofprogramming.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlossalasamper/reactject.git"
+  },
+  "files": [
+    "dist/reactject-redux-toolkit"
+  ],
+  "main": "dist/reactject-redux-toolkit/index.js",
+  "types": "dist/reactject-redux-toolkit/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "jest --watchAll",
+    "build": "tsc",
+    "lint": "eslint ./src --ext .ts,.tsx --max-warnings 0"
+  },
+  "devDependencies": {
+    "@types/react": "~17.0.21",
+    "react": "17.0.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

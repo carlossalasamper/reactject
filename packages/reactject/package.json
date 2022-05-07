@@ -1,0 +1,42 @@
+{
+  "name": "reactject",
+  "description": "React adapter of the TSyringe dependency injection container 💉",
+  "keywords": [
+    "dependency injection",
+    "react",
+    "react native",
+    "dependency",
+    "injection",
+    "ioc",
+    "container",
+    "javascript",
+    "typescript"
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Carlos Sala Samper",
+    "url": "https://godofprogramming.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlossalasamper/reactject.git",
+    "directory": "packages/reactject"
+  },
+  "files": [
+    "dist/reactject"
+  ],
+  "main": "dist/reactject/index.js",
+  "types": "dist/reactject/index.d.ts",
+  "dependencies": {
+    "tsyringe": "^4.6.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/react": "~17.0.21",
+    "react": "17.0.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

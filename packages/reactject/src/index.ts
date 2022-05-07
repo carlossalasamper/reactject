@@ -11,4 +11,3 @@ export {
   container,
 } from "tsyringe";
 export * from "./hooks";
-export * from "./third-parties";
