@@ -16,6 +16,7 @@
     - [Third parties](#third-parties)
       - [Redux Toolkit](#redux-toolkit)
       - [More integrations](#more-integrations)
+  - [Examples](#examples)
 - [Support the project](#support-the-project)
 
 ## Compatibility
@@ -80,6 +81,10 @@ To use the dependencies that we have registered in third-party library snippets,
 Are you missing the integration of the dependency container with any library that you are using in your React projects?
 
 **Write an issue in our repository and support us so that we can get to work ✌️**
+
+### Examples
+
+In the [/examples](/examples) folder you will find demo React applications that are using Reactject.
 
 <hr>
 
