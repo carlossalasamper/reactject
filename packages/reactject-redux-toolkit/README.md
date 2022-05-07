@@ -4,7 +4,7 @@
 
 # Reactject
 
-<img src="../../assets/images/logo.png?raw=true" style="width: 100%; max-width: 100%" />
+<img src="https://raw.githubusercontent.com/carlossalasamper/reactject/master/assets/images/logo.png"  style="width: 100%; max-width: 100%" />
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Introduction](#introduction)
