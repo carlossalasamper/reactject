@@ -47,5 +47,5 @@ yarn add reactject
 </nav>
 <hr>
 <p align="center">
-  <a href="https://godofprogramming.com" target="_blank">gofofprogramming.com</a>
+  <a href="https://godofprogramming.com" target="_blank">godofprogramming.com</a>
 </p>
