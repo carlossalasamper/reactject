@@ -1,7 +1,6 @@
 {
   "name": "reactject-repository",
   "description": "React adapter of the TSyringe dependency injection container 💉",
-  "license": "MIT",
   "author": {
     "name": "Carlos Sala Samperx",
     "url": "https://godofprogramming.com"
