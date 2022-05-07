@@ -4,7 +4,8 @@
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Introduction](#introduction)
-- [Getting started](#getting-started)
+- [Packages](#packages)
+- [Examples](#examples)
 - [Support the project](#support-the-project)
 
 ## Introduction
@@ -13,9 +14,17 @@ Start managing your project's runtime dependencies properly by using the depende
 
 <hr>
 
-## Getting Started
+## Packages
 
-Visit the [reactject package documentation](/packages/reactject/README.md) and start using dependency injection in React.
+- [reactject](/packages/reactject/README.md) - React adapter for TSyringe dependency injection container.
+- [reactject-redux-toolkit](/packages/reactject-redux-toolkit/README.md) - Reactject adapter for Redux Toolkit.
+
+<hr>
+
+## Examples
+
+- [Basic example](/examples/basic-example/) - Basic usage of the dependency container in React.
+- [Redux Toolkit example](/examples/redux-toolkit-example/) - Example of Reactject integration with the Redux Toolkit application state manager.
 
 <hr>
 
