@@ -8,9 +8,8 @@
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Introduction](#introduction)
-- [Compatibility](#compatibility)
+- [Installation](#installation)
 - [Usage](#usage)
-  - [Installation](#installation)
   - [Registering](#registering)
   - [Resolving](#resolving)
     - [Classes](#classes)
@@ -27,16 +26,9 @@ Start managing your project's runtime dependencies properly by using the depende
 
 <hr>
 
-## Compatibility
+## Installation
 
-- React (\*)
-- React Native (\*)
-
-<hr>
-
-## Usage
-
-### Installation
+- react (\*)
 
 ```
 npm install reactject
@@ -45,6 +37,10 @@ npm install reactject
 ```
 yarn add reactject
 ```
+
+<hr>
+
+## Usage
 
 ### Registering
 
