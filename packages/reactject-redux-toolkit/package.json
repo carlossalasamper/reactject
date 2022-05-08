@@ -1,6 +1,6 @@
 {
   "name": "reactject-redux-toolkit",
-  "description": "Reactject TSyringe adapter for Redux Toolkit 💉",
+  "description": "Reactject adapter for Redux Toolkit 💉",
   "keywords": [
     "dependency injection",
     "react",
@@ -14,7 +14,7 @@
     "redux toolkit",
     "redux"
   ],
-  "version": "0.1.0",
+  "version": "0.0.3",
   "license": "MIT",
   "author": {
     "name": "Carlos Sala Samper",
@@ -33,11 +33,13 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "@types/react": "~17.0.21",
     "react": "17.0.1",
     "typescript": "~4.3.5"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "@reduxjs/toolkit": "*"
   }
 }

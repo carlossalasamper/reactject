@@ -1,3 +1,4 @@
-import ReduxToolkitSlice from "./ReduxToolkitSlice";
+import BaseReduxToolkitStore from "./BaseReduxToolkitStore";
+import BaseReduxToolkitSlice from "./BaseReduxToolkitSlice";
 
-export { ReduxToolkitSlice };
+export { BaseReduxToolkitStore, BaseReduxToolkitSlice };

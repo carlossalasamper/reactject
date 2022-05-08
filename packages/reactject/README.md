@@ -91,7 +91,7 @@ Access the container dependencies transparently using the hooks we have prepared
 import { useResolve } from "reactject";
 
 const MyComponent = () => {
-  const helloWorld = useResolve<HelloWorld>();
+  const helloWorld = useResolve<HelloWorld>(HelloWorld);
 
   useEffect(() => {
     helloWorld.sayHello();

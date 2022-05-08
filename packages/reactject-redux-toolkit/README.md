@@ -1,14 +1,15 @@
 ![GitHub](https://img.shields.io/github/license/carlossalasamper/reactject)
-[![npm](https://img.shields.io/npm/v/reactject.svg)](https://www.npmjs.com/package/reactject-redux-toolkit)
-[![npm](https://img.shields.io/npm/dt/reactject.svg)](https://www.npmjs.com/package/reactject-redux-toolkit)
+[![npm](https://img.shields.io/npm/v/reactject-redux-toolkit.svg)](https://www.npmjs.com/package/reactject-redux-toolkit)
+[![npm](https://img.shields.io/npm/dt/reactject-redux-toolkit.svg)](https://www.npmjs.com/package/reactject-redux-toolkit)
 
-# Reactject
+# Reactject Redux Toolkit
 
 <img src="https://raw.githubusercontent.com/carlossalasamper/reactject/master/assets/images/logo.png"  style="width: 100%; max-width: 100%" />
-<p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
+<p align="center"><a href="https://github.com/carlossalasamper/reactject">Reactject</a> adapter to use dependency injection in <a href="https://redux-toolkit.js.org">Redux Toolkit</a> 💉</p>
 
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Usage](#usage)
 - [Support the project](#support-the-project)
 
 ## Introduction
@@ -24,11 +25,19 @@ Use the dependencies you've registered within the Redux Toolkit snippets. The st
 - @reduxjs/toolkit (\*)
 
 ```
-npm install reactject
+npm install reactject-redux-toolkit
 ```
 
 ```
-yarn add reactject
+yarn add reactject-redux-toolkit
+```
+
+<hr>
+
+## Usage
+
+```typescript
+// TODO
 ```
 
 <hr>
