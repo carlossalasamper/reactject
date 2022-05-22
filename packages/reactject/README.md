@@ -105,13 +105,7 @@ const MyComponent = () => {
 
 To use the dependencies that we have registered in third-party library snippets, we have prepared wrapper classes of the most used in React.
 
-##### Redux Toolkit
-
-```typescript
-// TODO
-```
-
-##### More integrations
+- [Redux Toolkit](https://github.com/carlossalasamper/reactject/blob/master/packages/reactject-redux-toolkit/README.md)
 
 Are you missing the integration of the dependency container with any library that you are using in your React projects?
 
@@ -120,9 +114,6 @@ Are you missing the integration of the dependency container with any library tha
 ### Examples
 
 In the [/examples](/examples) folder you will find demo React applications that are using Reactject.
-
-- [Basic Example](/examples/basic-example/)
-- [Redux Toolkit Example](/examples/redux-toolkit-example/)
 
 <hr>
 
