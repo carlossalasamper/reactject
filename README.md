@@ -16,8 +16,8 @@ Start managing your project's runtime dependencies properly by using the depende
 
 ## Packages
 
-- [reactject](/packages/reactject/README.md) - React adapter for TSyringe dependency injection container.
-- [reactject-redux-toolkit](/packages/reactject-redux-toolkit/README.md) - Reactject adapter for Redux Toolkit.
+- [reactject](/packages/reactject) - React adapter for TSyringe dependency injection container.
+- [reactject-redux-toolkit](/packages/reactject-redux-toolkit) - Reactject adapter for Redux Toolkit.
 
 <hr>
 
