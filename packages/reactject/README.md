@@ -50,15 +50,20 @@ Check the TSyringe container documentation if you have any questions about its u
 
 ```typescript
 import { injectable } from "reactject";
+import axios from "axios";
 
-@injectable()
-class HelloWorld {
-  public sayHello() {
-    console.log("Hello World!");
+@singleton()
+class GitHubService {
+  public readonly baseUrl = "https://api.github.com";
+
+  public async getUser(username: string) {
+    const response = await axios.get(`${this.baseUrl}/users/${username}`);
+
+    return response.data;
   }
 }
 
-export default HelloWorld;
+export default GitHubService;
 ```
 
 ### Resolving
@@ -69,18 +74,28 @@ Resolve the dependencies you have registered in the scopes where you need to use
 
 To resolve dependencies within javascript classes we will not have to do anything special, since TSyringe is prepared to inject them through the constructor.
 
+The following piece of code would allow us to inject dependencies into a class component.
+
 ```typescript
 import { inject } from "reactject";
 
-class ByeByeWorld {
-  private readonly helloWorld: HelloWorld;
+class MyComponent {
+  constructor(
+    @inject(GitHubService) private readonly gitHubService: GitHubService
+  ) {
+    this.gitHubService = gitHubService;
+  }
 
-  constructor(@inject(HelloWorld) helloWorld: HelloWorld) {
-    this.helloWorld = helloWorld;
+  private getUser() {
+    return this.gitHubService.getUser("carlossalasamper");
+  }
+
+  private render() {
+    return <div>This is my component</div>;
   }
 }
 
-export default ByeByeWorld;
+export default MyComponent;
 ```
 
 #### Hooks
@@ -91,10 +106,10 @@ Access the container dependencies transparently using the hooks we have prepared
 import { useResolve } from "reactject";
 
 const MyComponent = () => {
-  const helloWorld = useResolve<HelloWorld>(HelloWorld);
+  const gitHubService = useResolve(gitHubService);
 
   useEffect(() => {
-    helloWorld.sayHello();
+    gitHubService.getUser("carlossalasamper");
   }, []);
 
   return <div>This is my component</div>;
@@ -103,13 +118,25 @@ const MyComponent = () => {
 
 #### Third parties
 
-To use the dependencies that we have registered in third-party library snippets, we have prepared wrapper classes of the most used in React.
+⚠️ **Creating classes that wrap the integrations would oversize the use of dependency injection in React and would also be very expensive to maintain.**
 
-- [Redux Toolkit](https://github.com/carlossalasamper/reactject/blob/master/packages/reactject-redux-toolkit/README.md)
+To use our dependencies in the integration code of third parties that do not offer a class through which we can inject the objects that we need, we will access the container directly.
 
-Are you missing the integration of the dependency container with any library that you are using in your React projects?
+For example, to access the container from a [Redux Toolkit AsyncThunk](https://redux-toolkit.js.org/api/createAsyncThunk) we would do it as follows:
 
-**Write an issue in our repository and support us so that we can get to work ✌️**
+```typescript
+import { container } from "reactject";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import GitHubService from "../services/GitHubService";
+
+const getUser = createAsyncThunk(
+  "github/getUser",
+  async (username: string, thunkAPI) => {
+    const gitHubService = container.resolve(GitHubService);
+    return gitHubService.getUser(username);
+  }
+);
+```
 
 ### Examples
 
