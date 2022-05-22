@@ -82,9 +82,7 @@ import { inject } from "reactject";
 class MyComponent {
   constructor(
     @inject(GitHubService) private readonly gitHubService: GitHubService
-  ) {
-    this.gitHubService = gitHubService;
-  }
+  ) {}
 
   private getUser() {
     return this.gitHubService.getUser("carlossalasamper");
