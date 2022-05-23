@@ -76,7 +76,7 @@ To resolve dependencies within javascript classes we will not have to do anythin
 
 The following piece of code would allow us to inject dependencies into a class component.
 
-```typescript
+```tsx
 import { inject } from "reactject";
 
 class MyComponent {
