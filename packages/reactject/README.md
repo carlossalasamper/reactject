@@ -76,6 +76,7 @@ The following piece of code would allow us to inject dependencies into a class c
 
 ```tsx
 import { inject } from "reactject";
+import GitHubService from '../services/GitHubService';
 
 class MyComponent {
   constructor(
@@ -100,9 +101,10 @@ Access the container dependencies transparently using the hooks we have prepared
 
 ```tsx
 import { useResolve } from "reactject";
+import GitHubService from '../services/GitHubService';
 
 const MyComponent = () => {
-  const gitHubService = useResolve(gitHubService);
+  const gitHubService = useResolve(GitHubService);
 
   useEffect(() => {
     gitHubService.getUser("carlossalasamper");
