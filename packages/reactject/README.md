@@ -15,8 +15,6 @@
     - [Classes](#classes)
     - [Hooks](#hooks)
     - [Third parties](#third-parties)
-      - [Redux Toolkit](#redux-toolkit)
-      - [More integrations](#more-integrations)
   - [Examples](#examples)
 - [Support the project](#support-the-project)
 
