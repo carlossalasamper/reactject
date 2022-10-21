@@ -31,7 +31,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "npm publish"
   },
   "dependencies": {
     "tsyringe": "^4.6.0",
