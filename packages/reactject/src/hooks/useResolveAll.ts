@@ -1,12 +1,8 @@
-import { useMemo, DependencyList } from "react";
+import { useMemo } from "react";
 import { container, InjectionToken } from "tsyringe";
 
-const useResolveAll = <T>(
-  token: InjectionToken<T>,
-  deps: DependencyList = []
-) => {
-  const dependencies = useMemo(() => container.resolveAll<T>(token), deps);
-  return dependencies;
+const useResolveAll = <T>(token: InjectionToken<T>) => {
+  return useMemo(() => container.resolveAll<T>(token), [token]);
 };
 
 export default useResolveAll;

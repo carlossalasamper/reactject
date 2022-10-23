@@ -9,5 +9,6 @@ export {
   injectWithTransform,
   injectAllWithTransform,
   container,
+  registry,
 } from "tsyringe";
 export * from "./hooks";

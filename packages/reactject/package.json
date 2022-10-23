@@ -14,7 +14,7 @@
     "redux",
     "redux toolkit"
   ],
-  "version": "0.1.8",
+  "version": "0.1.95",
   "license": "MIT",
   "author": {
     "name": "Carlos Sala Samper",
@@ -31,12 +31,11 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "publish": "npm publish"
+    "build": "tsc"
   },
   "dependencies": {
-    "tsyringe": "^4.6.0",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
   },
   "devDependencies": {
     "@types/react": "~17.0.21",

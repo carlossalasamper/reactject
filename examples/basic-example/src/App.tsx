@@ -1,10 +1,11 @@
-import { useResolve } from "reactject";
+import { useResolve, useResolveMany } from "reactject";
 import logo from "./logo.svg";
 import "./App.css";
 import GitHubService from "./services/GitHubService";
 import { useCallback, useEffect, useState } from "react";
 
 function App() {
+  const { kuka } = useResolveMany({ kuka: GitHubService });
   const gitHubService = useResolve(GitHubService);
   const [isLoading, setIsLoading] = useState(false);
   const [gitHubUser, setGitHubUser] = useState(null);
