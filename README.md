@@ -1,6 +1,8 @@
 # Reactject
 
-<img src="./assets/images/logo.png?raw=true" style="width: 100%; max-width: 100%" />
+<p align="center">
+  <img src="./assets/images/logo.png?raw=true" style="width: 100%; max-width: 800px" />
+</p>
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Introduction](#introduction)
@@ -38,7 +40,6 @@ Start managing your project's runtime dependencies properly by using the depende
   <a href="https://twitter.com/carlossala95" target="_blank">Twitter 🐦</a>
   <a href="https://facebook.com/carlossala95" target="_blank">Facebook 👍</a>
 </p>
-<hr>
 <p align="center">
   <a href="https://godofprogramming.com" target="_blank">godofprogramming.com</a>
 </p>
