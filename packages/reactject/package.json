@@ -13,11 +13,9 @@
     "clean architecture",
     "container",
     "javascript",
-    "typescript",
-    "redux",
-    "redux toolkit"
+    "typescript"
   ],
-  "version": "0.1.97",
+  "version": "0.2.0",
   "license": "MIT",
   "author": {
     "name": "Carlos Sala Samper",

@@ -4,7 +4,9 @@
 
 # Reactject
 
-<img src="https://raw.githubusercontent.com/carlossalasamper/reactject/master/assets/images/logo.png" style="width: 100%; max-width: 100%" />
+<p align="center">
+  <img src="https://raw.githubusercontent.com/carlossalasamper/reactject/master/assets/images/logo.png" style="width: 100%; max-width: 800px" />
+</p>
 <p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
 
 - [Introduction](#introduction)
@@ -76,7 +78,7 @@ The following piece of code would allow us to inject dependencies into a class c
 
 ```tsx
 import { inject } from "reactject";
-import GitHubService from '../services/GitHubService';
+import GitHubService from "../services/GitHubService";
 
 class MyComponent {
   constructor(
@@ -101,7 +103,7 @@ Access the container dependencies transparently using the hooks we have prepared
 
 ```tsx
 import { useResolve } from "reactject";
-import GitHubService from '../services/GitHubService';
+import GitHubService from "../services/GitHubService";
 
 const MyComponent = () => {
   const gitHubService = useResolve(GitHubService);
@@ -146,17 +148,16 @@ In the [/examples](/examples) folder you will find demo React applications that 
 
 ## Support the project
 
-☕️ Buy me a coffee so the open source party never ends.
+<p align="center">☕️ Buy me a coffee so the open source party never ends.</p>
 
-<a href="https://www.buymeacoffee.com/carlossala95" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<p align="center"><a href="https://www.buymeacoffee.com/carlossala95" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a></p>
 
-<nav align="center">
+<p align="center">
   <a href="https://www.youtube.com/channel/UCC-EUKPStBfQ1nEIvSl6bAQ" target="_blank">YouTube ▶️</a>
   <a href="https://instagram.com/carlossalasamper" target="_blank">Instagram 📸</a>
   <a href="https://twitter.com/carlossala95" target="_blank">Twitter 🐦</a>
   <a href="https://facebook.com/carlossala95" target="_blank">Facebook 👍</a>
-</nav>
-<hr>
+</p>
 <p align="center">
   <a href="https://godofprogramming.com" target="_blank">godofprogramming.com</a>
 </p>
