@@ -1,9 +1,11 @@
 import "reflect-metadata";
 import { container } from "tsyringe";
-import ReactjectModule from "./types/ReactjectModule";
+import InstantiableModule from "./types/InstantiableModule";
 
 export const Reactject = {
-  start: (rootModule: ReactjectModule) => {
+  start: (RootModule: InstantiableModule) => {
+    const rootModule = new RootModule();
+
     rootModule.register(container);
   },
 };

@@ -1,3 +1,4 @@
+import { DependencyContainer } from "tsyringe";
 import ReactjectModule from "./ReactjectModule";
 
-export { ReactjectModule };
+export { DependencyContainer, ReactjectModule };
