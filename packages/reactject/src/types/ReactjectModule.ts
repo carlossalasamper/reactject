@@ -7,8 +7,8 @@ export default class ReactjectModule {
   public container!: DependencyContainer;
 
   start() {
-    this.config.Submodules.forEach((Submodule) => {
-      this.submodules.push(new Submodule());
+    this.config.submodules?.forEach((submodule) => {
+      this.submodules.push(new submodule());
     });
   }
 

@@ -4,6 +4,6 @@ import ReactjectModule from "./ReactjectModule";
 export { DependencyContainer, ReactjectModule };
 
 export interface ModuleConfig {
+  submodules?: typeof ReactjectModule[];
   hasChildContainer?: boolean;
-  Submodules: typeof ReactjectModule[];
 }
