@@ -1,11 +1,14 @@
 import "reflect-metadata";
 import { container } from "tsyringe";
-import InstantiableModule from "./types/InstantiableModule";
+import { ReactjectModule } from "./types";
 
 export const Reactject = {
-  start: (RootModule: InstantiableModule) => {
+  start: (RootModule: typeof ReactjectModule) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     const rootModule = new RootModule();
 
+    rootModule.start();
     rootModule.register(container);
   },
 };

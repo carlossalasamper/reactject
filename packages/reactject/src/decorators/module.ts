@@ -1,12 +1,9 @@
 import { ReactjectModule } from "../types";
-import InstantiableModule from "../types/InstantiableModule";
 
-export default function module(ChildrenModules: InstantiableModule[]) {
+export default function module(ChildrenModules: typeof ReactjectModule[]) {
   return (constructor: typeof ReactjectModule) => {
     return class extends constructor {
-      constructor() {
-        super(ChildrenModules);
-      }
+      ChildrenModules = ChildrenModules;
     };
   };
 }
