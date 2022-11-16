@@ -1,9 +1,9 @@
-import { ReactjectModule } from "../types";
+import { ModuleConfig, ReactjectModule } from "../types";
 
-export default function module(ChildrenModules: typeof ReactjectModule[]) {
+export default function module(config: ModuleConfig) {
   return (constructor: typeof ReactjectModule) => {
     return class extends constructor {
-      ChildrenModules = ChildrenModules;
+      config = config;
     };
   };
 }

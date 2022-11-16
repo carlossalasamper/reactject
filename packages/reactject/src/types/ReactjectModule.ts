@@ -1,18 +1,26 @@
 import { DependencyContainer } from "tsyringe";
+import { ModuleConfig } from ".";
 
 export default class ReactjectModule {
-  public ChildrenModules!: typeof ReactjectModule[];
-  public children: ReactjectModule[] = [];
+  public readonly config!: ModuleConfig;
+  public readonly submodules: ReactjectModule[] = [];
+  public container!: DependencyContainer;
 
   start() {
-    this.ChildrenModules.forEach((ChildrenModule) => {
-      this.children.push(new ChildrenModule());
+    this.config.Submodules.forEach((Submodule) => {
+      this.submodules.push(new Submodule());
     });
   }
 
   public register(container: DependencyContainer) {
-    this.children.forEach((child) => {
-      child.register(container);
+    this.container = container;
+
+    this.submodules.forEach((child) => {
+      child.register(
+        this.config.hasChildContainer
+          ? container.createChildContainer()
+          : container
+      );
     });
   }
 }
