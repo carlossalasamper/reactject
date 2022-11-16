@@ -2,7 +2,7 @@ import { DependencyContainer } from "tsyringe";
 import InstantiableModule from "./InstantiableModule";
 
 export default abstract class ReactjectModule {
-  protected children: ReactjectModule[] = [];
+  public children: ReactjectModule[] = [];
 
   constructor(children: InstantiableModule[]) {
     children.forEach((child) => {

@@ -23,3 +23,4 @@ export {
 } from "tsyringe";
 export * from "./hooks";
 export * from "./types";
+export * from "./decorators";
