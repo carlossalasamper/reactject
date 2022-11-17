@@ -7,11 +7,17 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/carlossalasamper/reactject/master/assets/images/logo.png" style="width: 100%; max-width: 800px" />
 </p>
-<p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
+<p align="center">💉 The <a href="https://github.com/microsoft/tsyringe">TSyringe</a> framework to use dependency injection explicitly in <a href="https://es.reactjs.org">React</a>.</p>
 
 - [Introduction](#introduction)
+- [Reasons to use Reactject](#reasons-to-use-reactject)
+  - [⚙️ React TSyringe adapter](#⚙️-react-tsyringe-adapter)
+  - [🚀 Full execution control](#🚀-full-execution-control)
+  - [👨‍👩‍👧‍👦 Structured dependencies](#👨‍👩‍👧‍👦-structured-dependencies)
+  - [🏗️ On-demand features](#🏗️-on-demand-features)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Modules](#modules)
   - [Registering](#registering)
   - [Resolving](#resolving)
     - [Classes](#classes)
@@ -22,13 +28,87 @@
 
 ## Introduction
 
-Start managing your project's runtime dependencies properly by using the dependency injection pattern explicitly.
+🎉 Welcome to this framework that gives you full control over dependency management at runtime in React apps.
+
+To keep it short, Reactject is the necessary piece to connect your React application with the dependency container in an elegant way.
+
+Additionally the API adds new features and decorators to enhance the development experience.
+
+<small>Reactject is built on Microsoft's TypeScript efficient open source dependency container <a href="https://github.com/microsoft/tsyringe">TSyringe</a>.</small>
+
+<hr>
+
+## Reasons to use Reactject
+
+These are the reasons you didn't know why you should install Reactject in your React project.
+
+### ⚙️ React TSyringe adapter
+
+Reactject exposes the TSyringe container and adds optimized hooks to resolve dependencies in functional components.
+
+```typescript
+const MyComponent = () => {
+  const gitHubService = useResolve(GitHubService);
+
+  // TODO: use githubService to interact with the API
+
+  return <div>This is my component</div>;
+};
+```
+
+### 🚀 Full execution control
+
+Reactject works as a TSyringe wrapper to decide when and where the modules registration begins.
+
+<small>The "module" concept is very similar to <a href="https://angular.io/guide/architecture-modules">the Angular's one</a>, but each module can choose between to use a child container or to register dependencies in the parent module container.</small>
+
+```typescript
+import {
+  ReactjectModule,
+  Reactject,
+  module,
+  DependencyContainer,
+} from "reactject";
+import GithubService from "./GithubService";
+
+@module()
+class AppModule extends ReactjectModule {
+  register(container: DependencyContainer) {
+    super(container);
+
+    container.registerSingleton(GithubService);
+  }
+}
+
+Reactject.start(AppModule);
+```
+
+### 👨‍👩‍👧‍👦 Structured dependencies
+
+Use our `@module` decorator to specify the submodules of a module. Modules will be registered recursively after `Reactject.start(AppModule)` execution.
+
+```typescript
+@module({
+  submodules: [PaymentModule, SharedModule],
+})
+class AppModule extends ReactjectModule {}
+
+Reactject.start(AppModule);
+```
+
+All the dependencies of both `PaymentModule` and `SharedModule` will be registered when Reactject starts.
+
+### 🏗️ On-demand features
+
+We are aware that there are still not too many functionalities nor is the direction of the project well defined.
+
+But we can see this situation as an opportunity to listen to the community and develop, after an evaluation, the features that are most requested.
+
+[Support us](#support-the-project) and participate in the community to be part of the history of Reactject.
 
 <hr>
 
 ## Installation
-
-- react (\*)
 
 ```
 npm install reactject
@@ -42,17 +122,18 @@ yarn add reactject
 
 ## Usage
 
-### Registering
+### Modules
 
-Register the classes or interfaces you are going to use as dependencies using the [TSyringe decorators](https://github.com/microsoft/tsyringe#decorators).
+In Reactject you register your dependencies organized by modules and when you start the root module (AppModule) the framework register all the submodules recursively.
 
-Check the TSyringe container documentation if you have any questions about its use.
+Think modules are a pattern to group your dependencies and scope them with the `container` prop of the `@module` decorator. Dependencies in a module are by default registered in the global app container.
 
 ```typescript
+// GithubService.ts
 import { injectable } from "reactject";
 import axios from "axios";
 
-@singleton()
+@injectable()
 class GitHubService {
   public readonly baseUrl = "https://api.github.com";
 
@@ -64,6 +145,78 @@ class GitHubService {
 }
 
 export default GitHubService;
+```
+
+```typescript
+// GithubModule.ts
+import { ReactjectModule, Reactject, module } from "reactject";
+import GithubService from "./GithubService";
+
+@module({
+  container: "child",
+})
+export class GithubModule extends ReactjectModule {
+  register(container: DependencyContainer) {
+    super(container);
+
+    container.registerSingleton(GithubService);
+  }
+}
+```
+
+```typescript
+// AppModule.ts
+import { ReactjectModule, Reactject, module } from "reactject";
+import { GithubModule } from "./GithubModule";
+
+@module({
+  submodules: [GithubModule],
+})
+class AppModule extends ReactjectModule {}
+
+Reactject.start(AppModule);
+```
+
+### Registering
+
+Register the classes or interfaces you are going to use as dependencies using the [TSyringe decorators](https://github.com/microsoft/tsyringe#decorators).
+
+Check the TSyringe container documentation if you have any questions about its use.
+
+Mark your class as @injectable and register it explicitly in a module.
+
+```typescript
+// GithubService.ts
+import { injectable } from "reactject";
+import axios from "axios";
+
+@injectable()
+class GitHubService {
+  public readonly baseUrl = "https://api.github.com";
+
+  public async getUser(username: string) {
+    const response = await axios.get(`${this.baseUrl}/users/${username}`);
+
+    return response.data;
+  }
+}
+
+export default GitHubService;
+```
+
+```typescript
+// GithubModule.ts
+import { ReactjectModule, Reactject, module } from "reactject";
+import GithubService from "./GithubService";
+
+@module()
+export class GithubModule extends ReactjectModule {
+  register(container: DependencyContainer) {
+    super(container);
+
+    container.registerSingleton(GithubService);
+  }
+}
 ```
 
 ### Resolving

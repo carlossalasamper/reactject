@@ -3,7 +3,7 @@
 <p align="center">
   <img src="./assets/images/logo.png?raw=true" style="width: 100%; max-width: 800px" />
 </p>
-<p align="center"><a href="https://es.reactjs.org">React</a> adapter of the <a href="https://github.com/microsoft/tsyringe">TSyringe</a> dependency injection container 💉</p>
+<p align="center">💉 The <a href="https://github.com/microsoft/tsyringe">TSyringe</a> framework to use dependency injection explicitly in <a href="https://es.reactjs.org">React</a>.</p>
 
 - [Introduction](#introduction)
 - [Packages](#packages)
@@ -18,13 +18,13 @@ Start managing your project's runtime dependencies properly by using the depende
 
 ## Packages
 
-- [reactject](/packages/reactject) - React adapter for TSyringe dependency injection container.
+- [reactject](/packages/reactject) - 💡 Install this package in your React project to start managing dependencies in the right way.
 
 <hr>
 
 ## Examples
 
-- [Basic example](/examples/basic-example/) - Basic usage of the dependency container in React.
+- [Basic example](/examples/basic-example/) - Basic usage of the dependency injection framework.
 
 <hr>
 

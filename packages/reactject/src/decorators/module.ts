@@ -1,11 +1,11 @@
 import { ModuleConfig, ReactjectModule } from "../types";
 
-export default function module(config: ModuleConfig = {}) {
+export default function module(config: Partial<ModuleConfig> = {}) {
   return (constructor: typeof ReactjectModule) => {
     return class extends constructor {
       config: ModuleConfig = {
         submodules: config.submodules || [],
-        hasChildContainer: !!config.hasChildContainer,
+        container: config.container || "app",
       };
     };
   };

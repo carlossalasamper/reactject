@@ -1,4 +1,4 @@
-import { DependencyContainer } from "tsyringe";
+import { container as appContainer, DependencyContainer } from "tsyringe";
 import { ModuleConfig } from ".";
 
 export default class ReactjectModule {
@@ -16,11 +16,13 @@ export default class ReactjectModule {
     this.container = container;
 
     this.submodules.forEach((child) => {
-      child.register(
-        this.config.hasChildContainer
-          ? container.createChildContainer()
-          : container
-      );
+      const getContainerMethods = {
+        ["child"]: () => container.createChildContainer(),
+        ["parent"]: () => container,
+        ["app"]: () => appContainer,
+      };
+
+      child.register(getContainerMethods[child.config.container]());
     });
   }
 }
