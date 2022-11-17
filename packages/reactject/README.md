@@ -11,10 +11,10 @@
 
 - [Introduction](#introduction)
 - [Reasons to use Reactject](#reasons-to-use-reactject)
-  - [⚙️ React TSyringe adapter](#⚙️-react-tsyringe-adapter)
-  - [🚀 Full execution control](#🚀-full-execution-control)
-  - [👨‍👩‍👧‍👦 Structured dependencies](#👨‍👩‍👧‍👦-structured-dependencies)
-  - [🏗️ On-demand features](#🏗️-on-demand-features)
+  - [React TSyringe adapter](#react-tsyringe-adapter)
+  - [Full execution control](#full-execution-control)
+  - [Structured dependencies](#structured-dependencies)
+  - [On-demand features](#on-demand-features)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Modules](#modules)
@@ -42,7 +42,7 @@ Additionally the API adds new features and decorators to enhance the development
 
 These are the reasons you didn't know why you should install Reactject in your React project.
 
-### ⚙️ React TSyringe adapter
+### React TSyringe adapter
 
 Reactject exposes the TSyringe container and adds optimized hooks to resolve dependencies in functional components.
 
@@ -56,7 +56,7 @@ const MyComponent = () => {
 };
 ```
 
-### 🚀 Full execution control
+### Full execution control
 
 Reactject works as a TSyringe wrapper to decide when and where the modules registration begins.
 
@@ -83,7 +83,7 @@ class AppModule extends ReactjectModule {
 Reactject.start(AppModule);
 ```
 
-### 👨‍👩‍👧‍👦 Structured dependencies
+### Structured dependencies
 
 Use our `@module` decorator to specify the submodules of a module. Modules will be registered recursively after `Reactject.start(AppModule)` execution.
 
@@ -98,7 +98,7 @@ Reactject.start(AppModule);
 
 All the dependencies of both `PaymentModule` and `SharedModule` will be registered when Reactject starts.
 
-### 🏗️ On-demand features
+### On-demand features
 
 We are aware that there are still not too many functionalities nor is the direction of the project well defined.
 
